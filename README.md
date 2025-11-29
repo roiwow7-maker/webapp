@@ -176,10 +176,6 @@ Roy Zaio (roiwow7-maker)
 Proyecto académico y real para negocio Rgamer-Store.cl
 INACAP — Proyecto de Título y Evaluación de Proyectos 2025
 
-📄 Licencia
-
-Este proyecto no cuenta con una licencia pública.
-Todo el código es propiedad del autor y su uso es restringido.
 
 
 ---
