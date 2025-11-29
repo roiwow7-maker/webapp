@@ -78,19 +78,19 @@ Ejemplos funcionando:
 
 ## 🗃️ Estructura del proyecto
 
-webapp/
+##webapp/
+##│
+##├── web/ # Proyecto Django
+##│ ├── apps/ # Apps (shop, index, user…)
+##│ ├── templates/ # Plantillas Django
+##│ ├── staticfiles/ # Archivos estáticos generados
+##│ ├── media/ # Imágenes y modelos 3D
+##│ ├── web/ # Configuración Django
+##│ └── manage.py
+##│
+##├── frontend/ (opcional) # Si existe Next.js fuera del backend
 │
-├── web/ # Proyecto Django
-│ ├── apps/ # Apps (shop, index, user…)
-│ ├── templates/ # Plantillas Django
-│ ├── staticfiles/ # Archivos estáticos generados
-│ ├── media/ # Imágenes y modelos 3D
-│ ├── web/ # Configuración Django
-│ └── manage.py
-│
-├── frontend/ (opcional) # Si existe Next.js fuera del backend
-│
-└── README.md
+##└── README.md
 
 
 ---
