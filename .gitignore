@@ -1,0 +1,21 @@
+# Entorno Python
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+
+# Django
+web/staticfiles/
+web/media/
+
+# Node / frontend
+node_modules/
+.next/
+dist/
+
+# Otros
+*.log
+.idea/
+.vscode/
+.DS_Store
