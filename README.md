@@ -78,3 +78,120 @@ Ejemplos funcionando:
 
 ## 🗃️ Estructura del proyecto
 
+webapp/
+│
+├── web/ # Proyecto Django
+│ ├── apps/ # Apps (shop, index, user…)
+│ ├── templates/ # Plantillas Django
+│ ├── staticfiles/ # Archivos estáticos generados
+│ ├── media/ # Imágenes y modelos 3D
+│ ├── web/ # Configuración Django
+│ └── manage.py
+│
+├── frontend/ (opcional) # Si existe Next.js fuera del backend
+│
+└── README.md
+
+
+---
+
+## ⚙️ Instalación local (Backend)
+
+```bash
+git clone https://github.com/roiwow7-maker/webapp.git
+cd webapp
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+
+# Migraciones
+python manage.py migrate
+
+# Crear superusuario opcional
+python manage.py createsuperuser
+
+# Ejecutar servidor
+python manage.py runserver
+
+⚙️ Instalación local (Frontend)
+cd frontend   # si tu frontend está en carpeta aparte
+npm install
+npm run dev
+
+🚀 Despliegue en producción
+Nginx (ejemplo)
+server {
+    server_name rgamer-store.cl www.rgamer-store.cl;
+
+    location /static/ {
+        alias /ruta/web/staticfiles/;
+    }
+
+    location /media/ {
+        alias /ruta/web/media/;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+    }
+}
+
+Gunicorn
+gunicorn web.wsgi:application --bind 127.0.0.1:8000
+
+Collectstatic
+python manage.py collectstatic
+
+📌 Variables de entorno sugeridas
+SECRET_KEY=...
+DEBUG=False
+ALLOWED_HOSTS=rgamer-store.cl, www.rgamer-store.cl
+DATABASE_URL=postgres://usuario:pass@localhost:5432/rgamerstore
+
+📷 Capturas (agregar)
+
+Puedes incluir:
+
+Pantalla principal (catálogo)
+
+Carrito de compras
+
+Vista 3D
+
+Formulario de reciclaje
+
+Checkout
+
+Django Admin
+
+👤 Autor
+
+Roy Zaio (roiwow7-maker)
+Proyecto académico y real para negocio Rgamer-Store.cl
+INACAP — Proyecto de Título y Evaluación de Proyectos 2025
+
+📄 Licencia
+
+Este proyecto no cuenta con una licencia pública.
+Todo el código es propiedad del autor y su uso es restringido.
+
+
+---
+
+# 🚀 ¿Quieres que lo haga MÁS PRO aún?
+Puedo agregar:
+
+✔ Badges (Build passing, Python version, Next.js version)  
+✔ Instrucciones de API con ejemplos reales  
+✔ Vista previa GIF del carrito y 3D  
+✔ Tabla de endpoints  
+✔ Diagrama de arquitectura en ASCII  
+✔ Créditos y referencias académicas  
+
+Solo dime *sí quiero un README PRO v2* y lo hago.
