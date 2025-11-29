@@ -194,4 +194,4 @@ Puedo agregar:
 ✔ Diagrama de arquitectura en ASCII  
 ✔ Créditos y referencias académicas  
 
-Solo dime *sí quiero un README PRO v2* y lo hago.
+
